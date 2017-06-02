@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
-    android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/overlay"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="rahulkumardas.ytsyifytorrents.MovieDetailsActivity">
 
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
             android:layout_marginLeft="10dp"
             android:ellipsize="end"
+            android:paddingTop="@dimen/activity_vertical_margin"
             android:text="My name is khan"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/white" />
@@ -62,21 +64,48 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/semi_white" />
 
-                <TextView
-                    android:id="@+id/length"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Length : 120 minutes"
-                    android:textColor="@color/semi_white" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/rating"
+                    <TextView
+                        android:id="@+id/length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Dur : 120 min"
+                        android:textColor="@color/semi_white" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/length"
+                        android:background="@drawable/ic_clock" />
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Rating : 5.2/10"
-                    android:textColor="@color/semi_white" />
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Rating : 5.2/10"
+                        android:textColor="@color/semi_white" />
+
+                    <View
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/rating"
+                        android:background="@drawable/ic_star" />
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -98,7 +127,8 @@
                         android:background="@drawable/quality_back"
                         android:text="@string/lowRes"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/semi_white" />
+                        android:textColor="@color/semi_white"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/highRes"
@@ -108,7 +138,8 @@
                         android:background="@drawable/quality_back"
                         android:text="@string/highRes"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/semi_white" />
+                        android:textColor="@color/semi_white"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/threeD"
@@ -118,7 +149,8 @@
                         android:background="@drawable/quality_back"
                         android:text="@string/threeD"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/semi_white" />
+                        android:textColor="@color/semi_white"
+                        android:visibility="gone" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -136,8 +168,10 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/white" />
 
-        <com.google.android.youtube.player.YouTubePlayerView
+
+        <fragment
             android:id="@+id/youtube_view"
+            android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/download"
@@ -158,10 +192,225 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/synopsis_titlle"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Extreme athlete turned government operative Xander Cage (Vin Diesel) comes out of self-imposed exile, thought to be long dead, and is set on a collision course with deadly alpha warrior Xiang (Donnie Yen) and his team in a race to recover a sinister and seemingly unstoppable weapon known as Pandora's Box. Recruiting an all-new group of thrill-seeking cohorts, Xander finds himself enmeshed in a deadly conspiracy that points to collusion at the highest levels of world governments."
             android:textAlignment="inherit"
             android:textColor="@color/semi_white" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/synopsis"
+            android:layout_margin="10dp"
+            android:text="@string/more"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/yts_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/more"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/visit_yts"
+            android:textAlignment="inherit"
+            android:textColor="@color/semi_white" />
+
+        <TextView
+            android:id="@+id/imdb_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yts_link"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/visit_imdb"
+            android:textAlignment="inherit"
+            android:textColor="@color/semi_white" />
+
+        <TextView
+            android:id="@+id/suggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imdb_link"
+            android:layout_margin="10dp"
+            android:text="@string/suggestion"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/suggestion"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="@drawable/image_margin"
+                        android:cropToPadding="true"
+                        android:padding="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/name1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="This is moview name is khab"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/year1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/semi_white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="@drawable/image_margin"
+                        android:cropToPadding="true"
+                        android:padding="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="This is moview name is khab"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/year2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/semi_white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="@drawable/image_margin"
+                        android:cropToPadding="true"
+                        android:padding="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/name3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="This is moview name is khab"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/year3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/semi_white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="@drawable/image_margin"
+                        android:cropToPadding="true"
+                        android:padding="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/name4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="This is moview name is khab"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/year4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/semi_white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </RelativeLayout>
 </ScrollView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="rahulkumardas.ytsyifytorrents.SearchActivity">
+    <LinearLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/search_back"
+        android:gravity="center_vertical"
+        android:padding="2dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:src="@android:drawable/ic_menu_search"/>
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white"
+            android:textColorHint="@color/semi_white"
+            android:hint="search movie/cast/director"/>
+
+        <rahulkumardas.ytsyifytorrents.Utils.CircleProgressBar
+            android:layout_marginRight="10dp"
+            android:id="@+id/line_progress"
+            app:draw_progress_text="false"
+            app:style="line"
+            app:progress_stroke_cap="round"
+            app:progress_stroke_width="1dp"
+            app:progress_start_color="@color/colorAccent"
+            app:progress_end_color="@color/colorAccent"
+            app:background_color="@android:color/transparent"
+            app:line_width="4dp"
+            app:line_count="20"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_margin="10dp"
+        android:layout_below="@+id/search"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

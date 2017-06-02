@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YTS(YifyTorrents)</string>
+    <string name="app_name">YTS Movies</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -19,4 +19,98 @@
     <string name="threeD">3D</string>
     <string name="download">Download</string>
     <string name="search">Search</string>
+    <string name="quality">Quality</string>
+    <string name="size">Size</string>
+    <string name="seeds">Seeds</string>
+    <string name="peers">Peers</string>
+    <string name="language">Language</string>
+    <string name="apply">Apply</string>
+    <string name="rating">Rating</string>
+    <string name="genre">Genre</string>
+    <string name="order">Order By</string>
+    <string name="sort">Sort By</string>
+    <string name="more">For More:</string>
+    <string name="visit_yts"><i><u>Visit : YTS.AG</u></i></string>
+    <string name="visit_imdb"><i><u>Visit : IMDB.COM</u></i></string>
+    <string name="suggestion">Suggestions</string>
+    <string name="magnet">Magnet</string>
+    <string name="filter_movies">Filtered Movies</string>
+    <string name="autocomplete_search">AutoComplete Search</string>
+    <string name="no_of_spans">No Of Spans</string>
+
+    <string-array name="rating">
+        <item>All</item>
+        <item>1+</item>
+        <item>2+</item>
+        <item>3+</item>
+        <item>4+</item>
+        <item>5+</item>
+        <item>6+</item>
+        <item>7+</item>
+        <item>8+</item>
+        <item>9+</item>
+    </string-array>
+
+    <string-array name="quality">
+        <item>All</item>
+        <item>720p</item>
+        <item>1080p</item>
+        <item>3D</item>
+    </string-array>
+
+    <string-array name="genre">
+        <item>All</item>
+        <item>Action</item>
+        <item>Adventure</item>
+        <item>Animation</item>
+        <item>Action</item>
+        <item>Action</item>
+        <item>Action</item>
+        <item>Biography</item>
+        <item>Comedy</item>
+        <item>Crime</item>
+        <item>Documentary</item>
+        <item>Drama</item>
+        <item>Family</item>
+        <item>Fantasy</item>
+        <item>Game-Show</item>
+        <item>History</item>
+        <item>Horror</item>
+        <item>Music</item>
+        <item>Musical</item>
+        <item>Mystery</item>
+        <item>News</item>
+        <item>Reality-TV</item>
+        <item>Romance</item>
+        <item>Sci-Fi</item>
+        <item>Sitcom</item>
+        <item>Sport</item>
+        <item>Talk-Show</item>
+        <item>Thriller</item>
+        <item>War</item>
+        <item>Western</item>
+    </string-array>
+
+    <string-array name="order">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>title</item>
+        <item>year</item>
+        <item>rating</item>
+        <item>peers</item>
+        <item>seeds</item>
+        <item>download_count</item>
+        <item>like_count</item>
+        <item>date_added</item>
+    </string-array>
+
+    <string-array name="spans">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

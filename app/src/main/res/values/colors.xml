@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#0d0d0d</color>
     <color name="colorAccent">#6eca0c</color>
 
+    <color name="spinner_dark">#8af21d</color>
+    <color name="spinner_light">#fbfcf9</color>
+
     <color name="dark">#E2000000</color>
     <color name="white">@android:color/white</color>
     <color name="semi_white">#7dffffff</color>
